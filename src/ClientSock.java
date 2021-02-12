@@ -29,6 +29,7 @@ public class ClientSock {
         out.println(groupName);
         out.flush();
 
+        //To accept messages from server on a seperate thread
         Thread thread = new Thread(()->{
             while(true) {
                 try {
